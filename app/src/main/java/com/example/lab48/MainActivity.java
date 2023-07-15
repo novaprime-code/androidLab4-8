@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnSimpleInterest, btnCalculator, btnStudentInfo, btnPhoneNumber;
+    private Button btnSimpleInterest, btnCalculator, btnStudentInfo, btnPhoneNumber, btnSecretMessage;
 
 
 
@@ -56,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        btnSecretMessage = findViewById(R.id.secretMsg);
+
+        btnSecretMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

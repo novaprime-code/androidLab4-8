@@ -10,13 +10,12 @@ import android.widget.TextView;
 
 public class SimpleInterestActivity extends AppCompatActivity {
     private EditText etPrincipal, etRate, etTime;
-    private Button btnSubmit;
+    private Button btnSubmit, btnBack;
     private TextView tvResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simple_interest_activity);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         etPrincipal = findViewById(R.id.etPrincipal);
         etRate = findViewById(R.id.etRate);
@@ -46,7 +45,7 @@ public class SimpleInterestActivity extends AppCompatActivity {
             }
         });
 
-        Button btnBack = findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

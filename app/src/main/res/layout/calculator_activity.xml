@@ -7,13 +7,26 @@
     android:paddingHorizontal="30dp"
     tools:context=".CalculatorActivity">
 
-
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="5. Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#07B3E8"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
-        android:gravity="center"
-        tools:context=".CalculatorActivity">
+        android:textAlignment="center"
+        >
 
         <EditText
             android:id="@+id/etNumber1"
@@ -32,7 +45,15 @@
             android:inputType="numberDecimal"
             android:padding="16dp"
             />
-
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp">
@@ -83,17 +104,16 @@
                 android:layout_toEndOf="@+id/btnMultiply"
                 android:text="Divide" />
         </RelativeLayout>
-
-
-
-        <TextView
-            android:id="@+id/tvResult"
+        <Button
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:padding="16dp"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="Go Back"
+            android:layout_gravity="center"
+            />
+
+
+
 
     </LinearLayout>
 
